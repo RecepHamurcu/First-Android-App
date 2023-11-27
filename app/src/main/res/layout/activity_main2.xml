@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/txt_Random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="8dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_Count"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_Count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="70sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_Random"
+        app:layout_constraintEnd_toStartOf="@+id/txt_Random"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:background="@android:color/darker_gray"
+        android:onClick="Random"
+        android:text="Random"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_Count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_Count" />
+
+    <Button
+        android:id="@+id/btn_Count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="169dp"
+        android:background="@android:color/darker_gray"
+        android:onClick="Count"
+        android:text="Count"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Random"
+        app:layout_constraintStart_toEndOf="@+id/btn_Toast" />
+
+    <Button
+        android:id="@+id/btn_Toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="2dp"
+        android:background="@android:color/darker_gray"
+        android:onClick="Toast"
+        android:text="Toast"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_Count"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Count"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
